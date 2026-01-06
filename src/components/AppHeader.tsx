@@ -1,5 +1,6 @@
 import { Group, Button, ActionIcon, useMantineColorScheme } from '@mantine/core'
 import { IconSun, IconMoon, IconBrandGithub, IconBrandLinkedin, IconDownload } from '@tabler/icons-react'
+import { GITHUB_URL, LINKEDIN_URL, RESUME_URL } from '../constants/links'
 
 export function AppHeader() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme()
@@ -9,7 +10,7 @@ export function AppHeader() {
       <Group gap="md" wrap="nowrap">
         <Button
           component="a"
-          href="https://github.com"
+          href={GITHUB_URL}
           target="_blank"
           rel="noopener noreferrer"
           variant="subtle"
@@ -21,7 +22,7 @@ export function AppHeader() {
         </Button>
         <ActionIcon
           component="a"
-          href="https://github.com"
+          href={GITHUB_URL}
           target="_blank"
           rel="noopener noreferrer"
           variant="subtle"
@@ -33,7 +34,7 @@ export function AppHeader() {
         </ActionIcon>
         <Button
           component="a"
-          href="https://linkedin.com"
+          href={LINKEDIN_URL}
           target="_blank"
           rel="noopener noreferrer"
           variant="subtle"
@@ -45,7 +46,7 @@ export function AppHeader() {
         </Button>
         <ActionIcon
           component="a"
-          href="https://linkedin.com"
+          href={LINKEDIN_URL}
           target="_blank"
           rel="noopener noreferrer"
           variant="subtle"
@@ -57,7 +58,8 @@ export function AppHeader() {
         </ActionIcon>
         <Button
           component="a"
-          href="#"
+          href={RESUME_URL}
+          target="_blank"
           variant="subtle"
           leftSection={<IconDownload size={18} />}
           size="md"
@@ -67,7 +69,8 @@ export function AppHeader() {
         </Button>
         <ActionIcon
           component="a"
-          href="#"
+          href={RESUME_URL}
+          target="_blank"
           variant="subtle"
           size="lg"
           hiddenFrom="sm"

@@ -1,6 +1,7 @@
 import { Section } from './Section'
 import { Stack, Text, Group, Button } from '@mantine/core'
 import { IconMail, IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react'
+import { GITHUB_URL, LINKEDIN_URL, EMAIL_URL } from '../constants/links'
 
 export function Contact() {
   return (
@@ -12,7 +13,7 @@ export function Contact() {
         <Group gap="md" justify="center">
           <Button
             component="a"
-            href="mailto:chicote.belsonda@example.com"
+            href={EMAIL_URL}
             leftSection={<IconMail size={18} />}
             size="md"
           >
@@ -20,7 +21,7 @@ export function Contact() {
           </Button>
           <Button
             component="a"
-            href="https://github.com"
+            href={GITHUB_URL}
             target="_blank"
             rel="noopener noreferrer"
             variant="outline"
@@ -31,7 +32,7 @@ export function Contact() {
           </Button>
           <Button
             component="a"
-            href="https://linkedin.com"
+            href={LINKEDIN_URL}
             target="_blank"
             rel="noopener noreferrer"
             variant="outline"
