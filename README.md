@@ -115,12 +115,19 @@ To customize the portfolio for your own use:
    - `src/components/Projects.tsx` - Projects array
    - `src/components/Contact.tsx` - Contact information
 
-2. Update social links in:
-   - `src/components/AppHeader.tsx`
-   - `src/components/Hero.tsx`
-   - `src/components/Contact.tsx`
+2. Add images:
+   - Profile picture: Add `profile.jpg` to the `public` folder
+   - Project screenshots: Add project images to `public/projects/` folder:
+     - `college-enrollment.jpg` - For College Enrollment System
+     - `laravel-react.jpg` - For Laravel + React API System
+     - `todo-system.jpg` - For Task / Todo Management System
+   - Update image paths in `src/components/Projects.tsx` if using different filenames
 
-3. Update page title in `index.html`
+3. Update social links in:
+   - `src/constants/links.ts` - All links are centralized here
+   - Links are automatically used in AppHeader, Hero, and Contact components
+
+4. Update page title in `index.html`
 
 ## 📄 License
 
