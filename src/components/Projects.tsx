@@ -7,6 +7,8 @@ import xsurflogImg3 from '../../public/images/projects/xsurflog/image-3.png'
 
 import euschool from '../../public/images/projects/euschool/eu-school.jpeg'
 
+import gridpbx from '../../public/images/projects/gridpbx/gridpbx.png'
+
 const projects = [
   // {
   //   title: 'College Enrollment System',
@@ -19,16 +21,20 @@ const projects = [
   //   ],
   //   siteUrl: 'https://example.com',
   // },
-  // {
-  //   title: 'Laravel + React API System',
-  //   description: 'Full-stack application with Laravel backend and React frontend, implementing JWT authentication for secure user management and API access.',
-  //   technologies: ['Laravel', 'React', 'JWT', 'MySQL'],
-  //   images: [
-  //     '/projects/laravel-react.jpg',
-  //     '/projects/laravel-react-2.jpg',
-  //   ],
-  //   githubUrl: 'https://github.com/example/laravel-react',
-  // },
+  {
+    title: 'GridPBX Communication',
+    description: `
+    GridPBX is a cloud-based telephony system that provides a complete suite of communication tools for businesses.
+    It includes features such as voicemail, call forwarding, call recording, and more.
+    It also includes a web interface for managing the system.
+    It is built with Laravel backend and Vuejs frontend, implementing JWT authentication for secure user management and API access.
+    `,
+    technologies: ['PHP', 'Laravel', 'Vuejs', 'Vuetify', 'MySQL', 'Linux'],
+    images: [
+      gridpbx,
+    ],
+    githubUrl: '',
+  },
   {
     title: 'EU School',
     description: `A Web Site for Japanese ESL students. It books teacher, room, and student schedules. 
