@@ -38,8 +38,8 @@ export function ProjectCard({ title, description, technologies, images, siteUrl,
                   height={200}
                   fit="cover"
                   style={{ 
-                    borderTopLeftRadius: 'var(--mantine-radius-md)', 
-                    borderTopRightRadius: 'var(--mantine-radius-md)',
+                    borderTopLeftRadius: 'var(--mantine-radius-sm)', 
+                    borderTopRightRadius: 'var(--mantine-radius-sm)',
                     cursor: 'pointer'
                   }}
                   onClick={() => handleImageClick(0)}
@@ -71,8 +71,8 @@ export function ProjectCard({ title, description, technologies, images, siteUrl,
                         height={200}
                         fit="cover"
                         style={{ 
-                          borderTopLeftRadius: 'var(--mantine-radius-md)', 
-                          borderTopRightRadius: 'var(--mantine-radius-md)',
+                          borderTopLeftRadius: 'var(--mantine-radius-sm)', 
+                          borderTopRightRadius: 'var(--mantine-radius-sm)',
                           cursor: 'pointer'
                         }}
                         onClick={() => handleImageClick(index)}

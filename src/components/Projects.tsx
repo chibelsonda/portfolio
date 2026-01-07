@@ -1,10 +1,11 @@
-import { Section } from './Section'
-import { Grid } from '@mantine/core'
+import { Container, Title, Text, Grid } from '@mantine/core'
 import { ProjectCard } from './ProjectCard'
 
 import xsurflogImg1 from '../../public/images/projects/xsurflog/image-1.png'
 import xsurflogImg2 from '../../public/images/projects/xsurflog/image-2.png'
 import xsurflogImg3 from '../../public/images/projects/xsurflog/image-3.png'
+
+import euschool from '../../public/images/projects/euschool/eu-school.jpeg'
 
 const projects = [
   // {
@@ -28,14 +29,17 @@ const projects = [
   //   ],
   //   githubUrl: 'https://github.com/example/laravel-react',
   // },
-  // {
-  //   title: 'Task / Todo Management System',
-  //   description: 'A modern task management application that helps users organize and track their daily tasks efficiently with an intuitive user interface.',
-  //   technologies: ['React', 'TypeScript', 'PostgreSQL'],
-  //   images: [
-  //     '/projects/todo-system.jpg',
-  //   ],
-  // },
+  {
+    title: 'EU School',
+    description: `A Web Site for Japanese ESL students. It books teacher, room, and student schedules. 
+    It also has a dashboard for the school administrators to manage the school.`,
+    technologies: ['Php', 'Laravel', 'MySQL', 'JQuery', 'Boostrap', 'AWS', 'HTML', 'CSS', 'Linux'],
+    images: [
+      euschool,
+    ],
+    siteUrl: '',
+    githubUrl: '',
+  },
   {
     title: 'XSurfLog',
     description: `XSurfLog is a security tool that protects users while browsing the internet. 
@@ -64,10 +68,16 @@ const projects = [
 
 export function Projects() {
   return (
-    <Section id="projects" title="Projects" subtitle="Some of my recent work">
-      <Grid gutter="md">
+    <Container fluid py="xl" id="projects">
+      <Title order={2} mb="sm" style={{ textAlign: 'center' }}>
+        Projects
+      </Title>
+      <Text c="dimmed" size="lg" mb="xl" style={{ textAlign: 'center' }}>
+        Some of my work
+      </Text>
+      <Grid gutter="md" justify={projects.length <= 2 ? 'center' : 'flex-start'}>
         {projects.map((project, index) => (
-          <Grid.Col key={index} span={{ base: 12, sm: 6, md: 6 }}>
+          <Grid.Col key={index} span={{ base: 12, sm: 6, md: 4 }}>
             <ProjectCard
               title={project.title}
               description={project.description}
@@ -79,6 +89,6 @@ export function Projects() {
           </Grid.Col>
         ))}
       </Grid>
-    </Section>
+    </Container>
   )
 }
