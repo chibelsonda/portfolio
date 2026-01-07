@@ -30,7 +30,7 @@ export function ProjectCard({ title, description, technologies, images, siteUrl,
       <Card shadow="sm" padding="lg" radius="sm" withBorder h="100%">
         <Stack gap="md">
           {hasImages && (
-            <Card.Section>
+            <div>
               {images!.length === 1 ? (
                 <Image
                   src={images![0]}
@@ -38,8 +38,8 @@ export function ProjectCard({ title, description, technologies, images, siteUrl,
                   height={200}
                   fit="cover"
                   style={{ 
-                    borderTopLeftRadius: 'var(--mantine-radius-sm)', 
-                    borderTopRightRadius: 'var(--mantine-radius-sm)',
+                    borderRadius: 'var(--mantine-radius-sm)',
+                    width: '100%',
                     cursor: 'pointer'
                   }}
                   onClick={() => handleImageClick(0)}
@@ -56,6 +56,9 @@ export function ProjectCard({ title, description, technologies, images, siteUrl,
                     indicator: 'carousel-indicator',
                   }}
                   styles={{
+                    root: {
+                      width: '100%',
+                    },
                     indicator: {
                       width: 8,
                       height: 8,
@@ -71,8 +74,7 @@ export function ProjectCard({ title, description, technologies, images, siteUrl,
                         height={200}
                         fit="cover"
                         style={{ 
-                          borderTopLeftRadius: 'var(--mantine-radius-sm)', 
-                          borderTopRightRadius: 'var(--mantine-radius-sm)',
+                          borderRadius: 'var(--mantine-radius-sm)',
                           cursor: 'pointer'
                         }}
                         onClick={() => handleImageClick(index)}
@@ -81,7 +83,7 @@ export function ProjectCard({ title, description, technologies, images, siteUrl,
                   ))}
                 </Carousel>
               )}
-            </Card.Section>
+            </div>
           )}
         <Text fw={600} size="lg">
           {title}
@@ -131,7 +133,7 @@ export function ProjectCard({ title, description, technologies, images, siteUrl,
         <Modal
           opened={opened}
           onClose={() => setOpened(false)}
-          size="xl"
+          size="80%"
           title={title}
           centered
           styles={{

@@ -4,8 +4,8 @@ import { GITHUB_URL, LINKEDIN_URL, PROFILE_IMAGE } from '../constants/links'
 
 export function Hero() {
   return (
-    <Container size="lg" py="xl" style={{ minHeight: '60vh', display: 'flex', alignItems: 'center' }}>
-      <Stack gap="lg" align="center" style={{ textAlign: 'center' }}>
+    <Container size="lg" py="xl" style={{ minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <Stack gap="lg" align="center" style={{ textAlign: 'center', width: '100%' }}>
         <Avatar
           src={PROFILE_IMAGE}
           alt="Chicote Belsonda"
