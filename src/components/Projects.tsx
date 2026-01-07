@@ -58,6 +58,7 @@ const projects = [
         xsurflogImg3,
     ],
     siteUrl: 'https://xsurflog.com',
+    githubUrl: '',
   },
 ]
 
