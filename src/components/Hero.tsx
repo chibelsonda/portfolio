@@ -9,13 +9,16 @@ export function Hero() {
         <Avatar
           src={PROFILE_IMAGE}
           alt="Chicote Belsonda"
-          size={200}
           radius="50%"
           style={{ 
             border: '4px solid var(--mantine-color-gray-2)',
             boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
             width: 'clamp(150px, 20vw, 200px)',
-            height: 'clamp(150px, 20vw, 200px)'
+            height: 'clamp(150px, 20vw, 200px)',
+            minWidth: 'clamp(150px, 20vw, 200px)',
+            minHeight: 'clamp(150px, 20vw, 200px)',
+            aspectRatio: '1 / 1',
+            flexShrink: 0
           }}
         />
         <Title order={1} size="3rem" fw={700}>

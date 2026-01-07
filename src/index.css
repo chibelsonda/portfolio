@@ -1,3 +1,19 @@
 /* body {
   background-color: #F5F7FB;
 } */
+
+.carousel-indicator {
+  width: 8px;
+  height: 8px;
+  transition: width 250ms ease;
+}
+
+.carousel-indicator[data-active] {
+  width: 24px;
+}
+
+/* Ensure profile avatar stays circular on all screen sizes */
+[data-mantine-component="Avatar"] img {
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
