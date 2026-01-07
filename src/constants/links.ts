@@ -1,4 +1,4 @@
-import profileImage from '../../public/images/profile.jpeg'
+import profileImage from '/images/profile.jpeg'
 
 export const GITHUB_URL = 'https://github.com/chibelsonda'
 export const LINKEDIN_URL = 'https://linkedin.com/in/chicote-belsonda-7b981ab9'

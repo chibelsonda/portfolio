@@ -1,13 +1,13 @@
 import { Container, Title, Text, Grid } from '@mantine/core'
 import { ProjectCard } from './ProjectCard'
 
-import xsurflogImg1 from '../../public/images/projects/xsurflog/image-1.png'
-import xsurflogImg2 from '../../public/images/projects/xsurflog/image-2.png'
-import xsurflogImg3 from '../../public/images/projects/xsurflog/image-3.png'
+import xsurflogImg1 from '/images/projects/xsurflog/image-1.png'
+import xsurflogImg2 from '/images/projects/xsurflog/image-2.png'
+import xsurflogImg3 from '/images/projects/xsurflog/image-3.png'
 
-import euschool from '../../public/images/projects/euschool/eu-school.jpeg'
+import euschool from '/images/projects/euschool/eu-school.jpeg'
 
-import gridpbx from '../../public/images/projects/gridpbx/gridpbx.png'
+import gridpbx from '/images/projects/gridpbx/gridpbx.png'
 
 const projects = [
   // {
@@ -81,7 +81,7 @@ export function Projects() {
       <Text c="dimmed" size="lg" mb="xl" style={{ textAlign: 'center' }}>
         Some of my work
       </Text>
-      <Grid gutter="md" justify={projects.length <= 2 ? 'center' : 'flex-start'}>
+      <Grid mx="xl" gutter="md" justify={projects.length <= 2 ? 'center' : 'flex-start'}>
         {projects.map((project, index) => (
           <Grid.Col key={index} span={{ base: 12, sm: 6, md: 4 }}>
             <ProjectCard
