@@ -10,17 +10,6 @@ import euschool from '/images/projects/euschool/eu-school.jpeg'
 import gridpbx from '/images/projects/gridpbx/gridpbx.png'
 
 const projects = [
-  // {
-  //   title: 'College Enrollment System',
-  //   description: 'A comprehensive enrollment system built with C# .NET, featuring optimized large queries using stored procedures for improved performance and scalability.',
-  //   technologies: ['C#', '.NET', 'SQL Server'],
-  //   images: [
-  //     '/projects/college-enrollment.jpg',
-  //     '/projects/college-enrollment-2.jpg',
-  //     '/projects/college-enrollment-3.jpg',
-  //   ],
-  //   siteUrl: 'https://example.com',
-  // },
   {
     title: 'GridPBX Communication',
     description: `
@@ -63,11 +52,71 @@ const projects = [
     It helps companies see risky behavior and improve security awareness.`,
     technologies: ['Php', 'Javascript', 'MySql', 'Bootstrap', 'JQuery', 'HTML'],
     images: [
-        xsurflogImg1,
-        xsurflogImg2,
-        xsurflogImg3,
+      xsurflogImg1,
+      xsurflogImg2,
+      xsurflogImg3,
     ],
     siteUrl: 'https://xsurflog.com',
+    githubUrl: '',
+  },
+  {
+    title: 'Daily Time Record System',
+    description: `
+    Daily Time Record System is a system that helps college employees manage their daily time record process.
+    It includes features such as time in, time out, and overtime.
+    It is built with C# .Net and MS SQL Server, implementing Crystal Report for reporting.
+    It is a desktop application that runs on Windows. 
+    `,
+    technologies: ['C#', '.Net', 'MS SQL Server', 'Crystal Report', 'Windows Server'],
+    images: [],
+    githubUrl: '',
+  },
+  {
+    title: 'Supply Management System',
+    description: `
+    Supply Management System is a system that helps college administrators manage their supply process.
+    It includes features such as inventory management, supplier management, purchase order management, and more.
+    It is built with C# .Net and MySQL, implementing Crystal Report for reporting and Excel for data export.
+    It is a desktop application that runs on Windows. 
+    `,
+    technologies: ['C#', '.Net', 'Entity Framework', 'MySQL', 'Crystal Report', 'Excel', 'Linux'],
+    images: [],
+    githubUrl: '',
+  },
+  {
+    title: 'Rosario Waterworks Billing System',
+    description: `
+    Rosario Waterworks Billing System is a system that helps Rosario Waterworks manage their billing process.
+    It includes features such as billing, payment, and more.
+    It is built with C# .Net and MySQL, implementing Crystal Report for reporting.
+    It is a desktop application that runs on Windows. 
+    `,
+    technologies: ['C#', '.Net', 'MySQL', 'Crystal Report'],
+    images: [],
+    githubUrl: '',
+  },
+  {
+    title: 'College Enrollment System',
+    description: `
+    College Enrollment System is a system that helps colleges manage their enrollment process.
+    It includes features such as student enrollment, student management, student records, class management, and more.
+    It is built with C# .Net and MySQL, implementing Crystal Report for reporting and Excel for data export.
+    It is a desktop application that runs on Windows. 
+    `,
+    technologies: ['C#', '.Net', 'MySQL', 'Crystal Report', 'Excel', 'Linux'],
+    images: [],
+    githubUrl: '',
+  },
+  {
+    title: 'College Library System',
+    description: `
+    College Library System is a desktop application that helps colleges manage their library process.
+    It includes features such as borrowing, returning, indexing, and cataloging books, student login, printing library cards.
+    It is built with VB6 and MySQL, implementing Crystal Report for reporting.
+    It is a desktop application that runs on Windows. 
+    `,
+    technologies: ['VB6', 'MySQL', 'Crystal Report'],
+    images: [],
     githubUrl: '',
   },
 ]
