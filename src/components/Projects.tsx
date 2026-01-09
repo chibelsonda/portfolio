@@ -130,7 +130,7 @@ export function Projects() {
       <Text c="dimmed" size="lg" mb="xl" style={{ textAlign: 'center' }}>
         Some of my work
       </Text>
-      <Grid mx="xl" gutter="md" justify={projects.length <= 2 ? 'center' : 'flex-start'}>
+      <Grid mx={{ sm: 'sm', md: 'xl' }} gutter="md" justify={projects.length <= 2 ? 'center' : 'flex-start'}>
         {projects.map((project, index) => (
           <Grid.Col key={index} span={{ base: 12, sm: 6, md: 4 }}>
             <ProjectCard
