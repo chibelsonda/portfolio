@@ -5,6 +5,9 @@ import xsurflogImg1 from '/images/projects/xsurflog/image-1.png'
 import xsurflogImg2 from '/images/projects/xsurflog/image-2.png'
 import xsurflogImg3 from '/images/projects/xsurflog/image-3.png'
 
+import vertexAuthImg1 from '/images/projects/vertex-auth/image-1.png'
+import vertexAuthImg2 from '/images/projects/vertex-auth/image-2.png'
+
 import euschool from '/images/projects/euschool/eu-school.jpeg'
 
 import gridpbx from '/images/projects/gridpbx/gridpbx.png'
@@ -33,6 +36,17 @@ const projects = [
       euschool,
     ],
     siteUrl: '',
+    githubUrl: '',
+  },
+  {
+    title: 'Vertex Auth',
+    description: `A centralized authentication system for Vertex Cybersecurity. Built with Nuxtjs frontend and Golang backend.`,
+    technologies: ['Vuejs', 'Nuxtjs', 'Golang', 'MySQL', 'Boostrap', 'HTML', 'CSS', 'JWT'],
+    images: [
+      vertexAuthImg1,
+      vertexAuthImg2,
+    ],
+    siteUrl: 'https://auth.vertexcybersecurity.com.au/',
     githubUrl: '',
   },
   {
