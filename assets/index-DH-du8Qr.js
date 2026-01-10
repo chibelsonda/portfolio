@@ -54,13 +54,13 @@ ${v}`}function K1({color:a,theme:i,autoContrast:u}){return i.autoContrast&&oo({c
     Payroll System is a system that helps companies manage their payroll process.
     It is built with Vuejs frontend and Laravel backend, implementing PostgreSQL for database and Vuetify for UI.
     It is under development and not yet released.
-    `,technologies:["Vuejs","Laravel","Vuetify","PostgreSQL"],images:[L3,G3,Y3,q3,V3,X3],githubUrl:"https://github.com/chibelsonda/payroll"},{title:"GridPBX Communication",description:`
+    `,technologies:["Vuejs","Laravel","Vuetify","PostgreSQL","Git"],images:[L3,G3,Y3,q3,V3,X3],githubUrl:"https://github.com/chibelsonda/payroll"},{title:"GridPBX Communication",description:`
     GridPBX is a cloud-based telephony system that provides a complete suite of communication tools for businesses.
     It includes features such as voicemail, call forwarding, call recording, and more.
     It also includes a web interface for managing the system.
     It is built with Laravel backend and Vuejs frontend, implementing JWT authentication for secure user management and API access.
-    `,technologies:["PHP","Laravel","Vuejs","Vuetify","MySQL","Linux"],images:[U3],githubUrl:""},{title:"EU School",description:`A Web Site for Japanese ESL students. It books teacher, room, and student schedules. 
-    It also has a dashboard for the school administrators to manage the school.`,technologies:["Php","Laravel","MySQL","JQuery","Boostrap","AWS","HTML","CSS","Linux"],images:[H3],siteUrl:"",githubUrl:""},{title:"Vertex Auth",description:"A centralized authentication system for Vertex Cybersecurity. Built with Nuxtjs frontend and Golang backend.",technologies:["Vuejs","Nuxtjs","Golang","MySQL","Boostrap","HTML","CSS","JWT"],images:[D3,B3],siteUrl:"https://auth.vertexcybersecurity.com.au/",githubUrl:""},{title:"XSurfLog",description:`XSurfLog is a security tool that protects users while browsing the internet. 
+    `,technologies:["PHP","Laravel","Vuejs","Vuetify","MySQL","Linux","Git"],images:[U3],githubUrl:""},{title:"EU School",description:`A Web Site for Japanese ESL students. It books teacher, room, and student schedules. 
+    It also has a dashboard for the school administrators to manage the school.`,technologies:["Php","Laravel","MySQL","JQuery","Boostrap","AWS","HTML","CSS","Linux","Git"],images:[H3],siteUrl:"",githubUrl:""},{title:"Vertex Auth",description:"A centralized authentication system for Vertex Cybersecurity. Built with Nuxtjs frontend and Golang backend.",technologies:["Vuejs","Nuxtjs","Golang","MySQL","Boostrap","HTML","CSS","JWT","Git"],images:[D3,B3],siteUrl:"https://auth.vertexcybersecurity.com.au/",githubUrl:""},{title:"XSurfLog",description:`XSurfLog is a security tool that protects users while browsing the internet. 
     It works as a browser extension or installed app and helps prevent phishing attacks and dangerous websites.
     What XSurfLog does (in simple terms):
     Blocks fake and dangerous websites
@@ -72,7 +72,7 @@ ${v}`}function K1({color:a,theme:i,autoContrast:u}){return i.autoContrast&&oo({c
     Works everywhere
     - It can be used in the cloud or installed inside a company, and works on computers, laptops, tablets, and phones.
     Helps manage employee security risks
-    It helps companies see risky behavior and improve security awareness.`,technologies:["Php","Javascript","MySql","Bootstrap","JQuery","HTML"],images:[j3,w3,O3],siteUrl:"https://xsurflog.com",githubUrl:""},{title:"Daily Time Record System",description:`
+    It helps companies see risky behavior and improve security awareness.`,technologies:["Php","Javascript","MySql","Bootstrap","JQuery","HTML","Git"],images:[j3,w3,O3],siteUrl:"https://xsurflog.com",githubUrl:""},{title:"Daily Time Record System",description:`
     Daily Time Record System is a system that helps college employees manage their daily time record process.
     It includes features such as time in, time out, and overtime.
     It is built with C# .Net and MS SQL Server, implementing Crystal Report for reporting.
