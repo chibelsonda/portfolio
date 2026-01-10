@@ -32,7 +32,7 @@ const projects = [
       payrollImg3,
       payrollImg4,
     ],
-    githubUrl: '',
+    githubUrl: 'https://github.com/chibelsonda/payroll',
   },
   {
     title: 'GridPBX Communication',
