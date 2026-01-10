@@ -27,7 +27,7 @@ const projects = [
     It is built with Vuejs frontend and Laravel backend, implementing PostgreSQL for database and Vuetify for UI.
     It is under development and not yet released.
     `,
-    technologies: ['Vuejs', 'Laravel', 'Vuetify', 'PostgreSQL'],
+    technologies: ['Vuejs', 'Laravel', 'Vuetify', 'PostgreSQL', 'Git'],
     images: [
       payrollImg1,
       payrollImg2,
@@ -46,7 +46,7 @@ const projects = [
     It also includes a web interface for managing the system.
     It is built with Laravel backend and Vuejs frontend, implementing JWT authentication for secure user management and API access.
     `,
-    technologies: ['PHP', 'Laravel', 'Vuejs', 'Vuetify', 'MySQL', 'Linux'],
+    technologies: ['PHP', 'Laravel', 'Vuejs', 'Vuetify', 'MySQL', 'Linux', 'Git'],
     images: [
       gridpbx,
     ],
@@ -56,7 +56,7 @@ const projects = [
     title: 'EU School',
     description: `A Web Site for Japanese ESL students. It books teacher, room, and student schedules. 
     It also has a dashboard for the school administrators to manage the school.`,
-    technologies: ['Php', 'Laravel', 'MySQL', 'JQuery', 'Boostrap', 'AWS', 'HTML', 'CSS', 'Linux'],
+    technologies: ['Php', 'Laravel', 'MySQL', 'JQuery', 'Boostrap', 'AWS', 'HTML', 'CSS', 'Linux', 'Git'],
     images: [
       euschool,
     ],
@@ -66,7 +66,7 @@ const projects = [
   {
     title: 'Vertex Auth',
     description: `A centralized authentication system for Vertex Cybersecurity. Built with Nuxtjs frontend and Golang backend.`,
-    technologies: ['Vuejs', 'Nuxtjs', 'Golang', 'MySQL', 'Boostrap', 'HTML', 'CSS', 'JWT'],
+    technologies: ['Vuejs', 'Nuxtjs', 'Golang', 'MySQL', 'Boostrap', 'HTML', 'CSS', 'JWT', 'Git'],
     images: [
       vertexAuthImg1,
       vertexAuthImg2,
@@ -89,7 +89,7 @@ const projects = [
     - It can be used in the cloud or installed inside a company, and works on computers, laptops, tablets, and phones.
     Helps manage employee security risks
     It helps companies see risky behavior and improve security awareness.`,
-    technologies: ['Php', 'Javascript', 'MySql', 'Bootstrap', 'JQuery', 'HTML'],
+    technologies: ['Php', 'Javascript', 'MySql', 'Bootstrap', 'JQuery', 'HTML', 'Git'],
     images: [
       xsurflogImg1,
       xsurflogImg2,
