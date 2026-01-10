@@ -11,7 +11,12 @@ const skills = [
   'PostgreSQL',
   'MySQL',
   'JavaScript',
-  'Linux'
+  'Linux',
+  'Git',
+  'HTML',
+  'CSS',
+  'Bootstrap',
+  'JQuery',
 ]
 
 export function Skills() {
