@@ -12,7 +12,28 @@ import euschool from '/images/projects/euschool/eu-school.jpeg'
 
 import gridpbx from '/images/projects/gridpbx/gridpbx.png'
 
+import payrollImg1 from '/images/projects/payroll/image-1.png'
+import payrollImg2 from '/images/projects/payroll/image-2.png'
+import payrollImg3 from '/images/projects/payroll/image-3.png'
+import payrollImg4 from '/images/projects/payroll/image-4.png'
+
 const projects = [
+  {
+    title: 'Payroll System',
+    description: `
+    Payroll System is a system that helps companies manage their payroll process.
+    It is built with Vuejs frontend and Laravel backend, implementing PostgreSQL for database and Vuetify for UI.
+    It is under development and not yet released.
+    `,
+    technologies: ['Vuejs', 'Laravel', 'Vuetify', 'PostgreSQL'],
+    images: [
+      payrollImg1,
+      payrollImg2,
+      payrollImg3,
+      payrollImg4,
+    ],
+    githubUrl: '',
+  },
   {
     title: 'GridPBX Communication',
     description: `
