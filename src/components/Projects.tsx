@@ -15,9 +15,6 @@ import gridpbx from '/images/projects/gridpbx/gridpbx.png'
 import payrollImg1 from '/images/projects/payroll/image-1.png'
 import payrollImg2 from '/images/projects/payroll/image-2.png'
 import payrollImg3 from '/images/projects/payroll/image-3.png'
-import payrollImg4 from '/images/projects/payroll/image-4.png'
-import payrollImg5 from '/images/projects/payroll/image-5.png'
-import payrollImg6 from '/images/projects/payroll/image-6.png'
 
 const projects = [
   {
@@ -31,12 +28,9 @@ const projects = [
     images: [
       payrollImg1,
       payrollImg2,
-      payrollImg3,
-      payrollImg4,
-      payrollImg5,
-      payrollImg6,
+      payrollImg3
     ],
-    githubUrl: 'https://github.com/chibelsonda/payroll',
+    githubUrl: '',
   },
   {
     title: 'GridPBX Communication',
