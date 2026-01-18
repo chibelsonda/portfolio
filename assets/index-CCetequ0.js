@@ -54,7 +54,7 @@ ${v}`}function K1({color:a,theme:i,autoContrast:u}){return i.autoContrast&&oo({c
     Payroll System is a system that helps companies manage their payroll process.
     It is built with Vuejs frontend and Laravel backend, implementing PostgreSQL for database and Vuetify for UI.
     It is under development and not yet released.
-    `,technologies:["Vuejs","Laravel","Vuetify","PostgreSQL","Git"],images:[L3,G3,Y3],githubUrl:""},{title:"GridPBX Communication",description:`
+    `,technologies:["Vuejs","Laravel","Vuetify","PostgreSQL","Git"],images:[L3,G3,Y3],githubUrl:"https://github.com/chibelsonda/payroll"},{title:"GridPBX Communication",description:`
     GridPBX is a cloud-based telephony system that provides a complete suite of communication tools for businesses.
     It includes features such as voicemail, call forwarding, call recording, and more.
     It also includes a web interface for managing the system.
