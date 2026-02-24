@@ -16,7 +16,24 @@ import payrollImg1 from '/images/projects/payroll/image-1.png'
 import payrollImg2 from '/images/projects/payroll/image-2.png'
 import payrollImg3 from '/images/projects/payroll/image-3.png'
 
+import hrImg1 from '/images/projects/hr/image-1.png'
+import hrImg2 from '/images/projects/hr/image-2.png'
+
 const projects = [
+  {
+    title: 'HR System',
+    description: `
+    HR System is a system that helps companies manage their human resources processes.
+    It is built with ReactJS frontend and C# ASP.NET WEB CORE backend, implementing PostgreSQL for database and Mantine UI for UI.
+    It is under development and not yet released.
+    `,
+    technologies: ['ReactJS', 'Mantine UI', 'C# ASP.NET WEB CORE', 'PostgreSQL', 'Git'],
+    images: [
+      hrImg1,
+      hrImg2
+    ],
+    githubUrl: 'https://github.com/chibelsonda/cyfrinhr',
+  },
   {
     title: 'Payroll System',
     description: `
@@ -30,7 +47,7 @@ const projects = [
       payrollImg2,
       payrollImg3
     ],
-    githubUrl: '',
+    githubUrl: 'https://github.com/chibelsonda/payroll',
   },
   {
     title: 'GridPBX Communication',
