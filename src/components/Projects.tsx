@@ -25,7 +25,6 @@ const projects = [
     description: `
     HR System is a system that helps companies manage their human resources processes.
     It is built with ReactJS frontend and C# ASP.NET WEB CORE backend, implementing PostgreSQL for database and Mantine UI for UI.
-    It is under development and not yet released.
     `,
     technologies: ['ReactJS', 'Mantine UI', 'C# ASP.NET WEB CORE', 'PostgreSQL', 'Git'],
     images: [
@@ -39,7 +38,6 @@ const projects = [
     description: `
     Payroll System is a system that helps companies manage their payroll process.
     It is built with Vuejs frontend and Laravel backend, implementing PostgreSQL for database and Vuetify for UI.
-    It is under development and not yet released.
     `,
     technologies: ['Vuejs', 'Laravel', 'Vuetify', 'PostgreSQL', 'Git'],
     images: [
