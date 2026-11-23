@@ -1,48 +1,52 @@
+import { Anchor, Button, Group, Paper, Stack, Text, Title } from '@mantine/core'
+import { IconBrandGithub, IconBrandLinkedin, IconMail, IconSend } from '@tabler/icons-react'
+import { EMAIL, EMAIL_URL, GITHUB_URL, LINKEDIN_URL } from '../constants/links'
 import { Section } from './Section'
-import { Stack, Text, Group, Button } from '@mantine/core'
-import { IconMail, IconBrandGithub, IconBrandLinkedin } from '@tabler/icons-react'
-import { GITHUB_URL, LINKEDIN_URL, EMAIL_URL } from '../constants/links'
 
 export function Contact() {
   return (
-    <Section id="contact" title="Get In Touch" subtitle="Let's connect and discuss opportunities">
-      <Stack gap="lg" align="center" maw={600} mx="auto">
-        <Text size="md" style={{ textAlign: 'center' }}>
-          I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
-        </Text>
-        <Group gap="md" justify="center">
-          <Button
-            component="a"
-            href={EMAIL_URL}
-            leftSection={<IconMail size={18} />}
-            size="md"
-          >
-            Email Me
+    <Section id="contact" title="Let’s build something useful" subtitle="Have a role, project, or technical challenge that fits my background? I’d be glad to hear about it.">
+      <Paper radius="xl" p={{ base: 'xl', md: 48 }} className="contact-panel">
+        <Stack gap="xl" align="center" ta="center">
+          <Stack gap="xs" align="center">
+            <Title order={3} size="h2">Start a conversation</Title>
+            <Text c="dimmed" size="lg" maw={600} lh={1.6}>
+              Tell me what you are building, where you need help, and what a successful outcome looks like.
+            </Text>
+            <Anchor href={EMAIL_URL} fw={600} size="lg">{EMAIL}</Anchor>
+          </Stack>
+
+          <Button component="a" href={EMAIL_URL} size="lg" rightSection={<IconSend size={18} />}>
+            Email me
           </Button>
-          <Button
-            component="a"
-            href={GITHUB_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="outline"
-            leftSection={<IconBrandGithub size={18} />}
-            size="md"
-          >
-            GitHub
-          </Button>
-          <Button
-            component="a"
-            href={LINKEDIN_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            variant="outline"
-            leftSection={<IconBrandLinkedin size={18} />}
-            size="md"
-          >
-            LinkedIn
-          </Button>
-        </Group>
-      </Stack>
+
+          <Group gap="sm" justify="center">
+            <Button
+              component="a"
+              href={GITHUB_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="default"
+              leftSection={<IconBrandGithub size={18} />}
+            >
+              GitHub
+            </Button>
+            <Button
+              component="a"
+              href={LINKEDIN_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="default"
+              leftSection={<IconBrandLinkedin size={18} />}
+            >
+              LinkedIn
+            </Button>
+            <Button component="a" href={EMAIL_URL} variant="default" leftSection={<IconMail size={18} />}>
+              Email
+            </Button>
+          </Group>
+        </Stack>
+      </Paper>
     </Section>
   )
 }

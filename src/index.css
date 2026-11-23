@@ -1,19 +1,171 @@
-/* body {
-  background-color: #F5F7FB;
-} */
-
-.carousel-indicator {
-  width: 8px;
-  height: 8px;
-  transition: width 250ms ease;
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
 }
 
-.carousel-indicator[data-active] {
-  width: 24px;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
 }
 
-/* Ensure profile avatar stays circular on all screen sizes */
-[data-mantine-component="Avatar"] img {
-  object-fit: cover;
-  aspect-ratio: 1 / 1;
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--mantine-color-body);
+}
+
+::selection {
+  color: var(--mantine-color-white);
+  background: var(--mantine-color-blue-7);
+}
+
+.site-header {
+  border-bottom: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+  background: color-mix(in srgb, var(--mantine-color-body) 88%, transparent);
+  backdrop-filter: blur(14px);
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 10% 10%, color-mix(in srgb, var(--mantine-color-blue-4) 14%, transparent), transparent 34%),
+    radial-gradient(circle at 90% 70%, color-mix(in srgb, var(--mantine-color-blue-5) 12%, transparent), transparent 30%);
+}
+
+.hero-title {
+  max-width: 780px;
+  font-size: clamp(2.65rem, 7vw, 5.25rem);
+  line-height: 0.99;
+  letter-spacing: -0.055em;
+}
+
+.profile-panel {
+  border: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+  background: color-mix(in srgb, var(--mantine-color-body) 78%, transparent);
+  box-shadow: 0 28px 80px color-mix(in srgb, var(--mantine-color-dark-9) 14%, transparent);
+  backdrop-filter: blur(12px);
+}
+
+.profile-avatar {
+  width: clamp(150px, 20vw, 210px);
+  height: clamp(150px, 20vw, 210px);
+  border: 6px solid light-dark(var(--mantine-color-white), var(--mantine-color-dark-6));
+  box-shadow: 0 16px 36px color-mix(in srgb, var(--mantine-color-dark-9) 18%, transparent);
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  letter-spacing: -0.035em;
+}
+
+.content-card,
+.compact-project,
+.project-card {
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.projects-section {
+  background: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-8));
+}
+
+.project-card {
+  overflow: hidden;
+  background: var(--mantine-color-body);
+}
+
+.additional-project-grid {
+  align-items: start;
+}
+
+.project-image-button,
+.project-placeholder {
+  display: grid;
+  width: 100%;
+  height: 230px;
+  place-items: center;
+  overflow: hidden;
+  border-radius: var(--mantine-radius-md);
+  color: var(--mantine-color-dimmed);
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--mantine-color-blue-3) 12%, transparent), transparent),
+    light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-7));
+}
+
+.project-image-button img {
+  padding: 8px;
+  transition: transform 220ms ease;
+}
+
+.compact-project-image {
+  height: 170px;
+}
+
+.project-carousel {
+  border-radius: var(--mantine-radius-md);
+  overflow: hidden;
+}
+
+.project-highlights {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--mantine-color-dimmed);
+}
+
+.project-highlights li::marker {
+  color: var(--mantine-color-blue-6);
+}
+
+.details-chevron {
+  transition: transform 180ms ease;
+}
+
+.details-chevron[data-opened] {
+  transform: rotate(180deg);
+}
+
+.contact-panel {
+  border: 1px solid light-dark(var(--mantine-color-blue-1), var(--mantine-color-blue-9));
+  background:
+    radial-gradient(circle at top left, color-mix(in srgb, var(--mantine-color-blue-4) 15%, transparent), transparent 42%),
+    light-dark(var(--mantine-color-white), var(--mantine-color-dark-7));
+}
+
+.site-footer {
+  border-top: 1px solid light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+}
+
+@media (hover: hover) {
+  .content-card:hover,
+  .compact-project:hover,
+  .project-card:hover {
+    transform: translateY(-4px);
+    border-color: light-dark(var(--mantine-color-blue-2), var(--mantine-color-blue-8));
+    box-shadow: 0 18px 48px color-mix(in srgb, var(--mantine-color-dark-9) 9%, transparent);
+  }
+
+  .project-image-button:hover img {
+    transform: scale(1.015);
+  }
+}
+
+@media (max-width: 48em) {
+  .hero-title {
+    letter-spacing: -0.04em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

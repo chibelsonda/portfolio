@@ -1,19 +1,41 @@
+import { Grid, Paper, Stack, Text, ThemeIcon, Title } from '@mantine/core'
+import { IconCloudComputing, IconCode, IconDatabase } from '@tabler/icons-react'
 import { Section } from './Section'
-import { Text, Stack } from '@mantine/core'
+
+const strengths = [
+  {
+    icon: IconCode,
+    title: 'Product-minded development',
+    description: 'I turn operational needs into practical interfaces, workflows, APIs, and integrations that people can use confidently.',
+  },
+  {
+    icon: IconDatabase,
+    title: 'Systems that handle real work',
+    description: 'My portfolio spans HR, payroll, enrollment, billing, authentication, reporting, communications, and cybersecurity.',
+  },
+  {
+    icon: IconCloudComputing,
+    title: 'End-to-end ownership',
+    description: 'I work from frontend and backend implementation through data modeling, Linux environments, cloud deployment, and maintenance.',
+  },
+]
 
 export function About() {
   return (
-    <Section id="about" title="About Me" subtitle="Get to know me better">
-      <Stack gap="md" maw={800} mx="auto">
-        <Text size="md">
-          I'm a Full Stack Web Developer with a passion for creating efficient, scalable, and user-friendly web applications.
-          I enjoy working across the entire technology stack, from backend APIs to frontend interfaces.
-        </Text>
-        <Text size="md">
-          My experience spans multiple technologies and frameworks, allowing me to choose the right tools for each project.
-          I'm always eager to learn new technologies and improve my skills.
-        </Text>
-      </Stack>
+    <Section id="about" title="Engineering across the stack" subtitle="Practical software, built around the people and processes it supports.">
+      <Grid gutter="lg">
+        {strengths.map(({ icon: Icon, title, description }) => (
+          <Grid.Col key={title} span={{ base: 12, md: 4 }}>
+            <Paper withBorder radius="lg" p="xl" h="100%" className="content-card">
+              <Stack gap="md">
+                <ThemeIcon size={46} radius="md" variant="light"><Icon size={25} /></ThemeIcon>
+                <Title order={3} size="h4">{title}</Title>
+                <Text c="dimmed" lh={1.7}>{description}</Text>
+              </Stack>
+            </Paper>
+          </Grid.Col>
+        ))}
+      </Grid>
     </Section>
   )
 }

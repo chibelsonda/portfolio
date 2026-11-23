@@ -1,197 +1,267 @@
-import { Container, Title, Text, Grid } from '@mantine/core'
+import { Badge, Button, Collapse, Container, Grid, Group, Image, Modal, Paper, SimpleGrid, Stack, Text, Title, UnstyledButton } from '@mantine/core'
+import { useDisclosure } from '@mantine/hooks'
+import { IconChevronDown } from '@tabler/icons-react'
+import { useId } from 'react'
 import { ProjectCard } from './ProjectCard'
 
+import euschool from '/images/projects/euschool/eu-school.jpeg'
+import gridpbx from '/images/projects/gridpbx/gridpbx.png'
+import hrImg1 from '/images/projects/hr/image-1.png'
+import hrImg2 from '/images/projects/hr/image-2.png'
+import payrollImg1 from '/images/projects/payroll/image-1.png'
+import payrollImg2 from '/images/projects/payroll/image-2.png'
+import payrollImg3 from '/images/projects/payroll/image-3.png'
+import vertexAuthImg1 from '/images/projects/vertex-auth/image-1.png'
+import vertexAuthImg2 from '/images/projects/vertex-auth/image-2.png'
 import xsurflogImg1 from '/images/projects/xsurflog/image-1.png'
 import xsurflogImg2 from '/images/projects/xsurflog/image-2.png'
 import xsurflogImg3 from '/images/projects/xsurflog/image-3.png'
 
-import vertexAuthImg1 from '/images/projects/vertex-auth/image-1.png'
-import vertexAuthImg2 from '/images/projects/vertex-auth/image-2.png'
-
-import euschool from '/images/projects/euschool/eu-school.jpeg'
-
-import gridpbx from '/images/projects/gridpbx/gridpbx.png'
-
-import payrollImg1 from '/images/projects/payroll/image-1.png'
-import payrollImg2 from '/images/projects/payroll/image-2.png'
-import payrollImg3 from '/images/projects/payroll/image-3.png'
-
-import hrImg1 from '/images/projects/hr/image-1.png'
-import hrImg2 from '/images/projects/hr/image-2.png'
-
-const projects = [
+const featuredProjects = [
   {
     title: 'HR System',
-    description: `
-    HR System is a system that helps companies manage their human resources processes.
-    It is built with ReactJS frontend and C# ASP.NET WEB CORE backend, implementing PostgreSQL for database and Mantine UI for UI.
-    `,
-    technologies: ['ReactJS', 'Mantine UI', 'C# ASP.NET WEB CORE', 'PostgreSQL', 'Git'],
-    images: [
-      hrImg1,
-      hrImg2
+    category: 'Business operations',
+    summary: 'A full-stack platform for managing human-resources processes through a focused web interface and a relational backend.',
+    features: [
+      'Centralizes human-resources processes in a single web application',
+      'Provides a focused interface for managing day-to-day HR information',
+      'Keeps operational records in a structured relational database',
     ],
-    githubUrl: 'https://github.com/chibelsonda/cyfrinhr',
+    technicalDetails: [
+      'React frontend composed with Mantine UI components',
+      'ASP.NET Core backend for application and business logic',
+      'PostgreSQL persistence for HR data',
+    ],
+    technologies: ['React', 'Mantine', 'ASP.NET Core', 'PostgreSQL'],
+    images: [hrImg1, hrImg2],
   },
   {
     title: 'Payroll System',
-    description: `
-    Payroll System is a system that helps companies manage their payroll process.
-    It is built with Vuejs frontend and Laravel backend, implementing PostgreSQL for database and Vuetify for UI.
-    `,
-    technologies: ['Vuejs', 'Laravel', 'Vuetify', 'PostgreSQL', 'Git'],
-    images: [
-      payrollImg1,
-      payrollImg2,
-      payrollImg3
+    category: 'Financial operations',
+    summary: 'A payroll application designed to help organizations manage recurring payroll workflows in one maintainable system.',
+    features: [
+      'Centralizes recurring payroll workflows in one application',
+      'Provides a browser-based interface for managing payroll information',
+      'Maintains payroll records in a relational data store',
     ],
+    technicalDetails: [
+      'Vue.js frontend built with Vuetify components',
+      'Laravel backend for payroll workflows and data access',
+      'PostgreSQL database for persistent payroll records',
+    ],
+    technologies: ['Vue.js', 'Laravel', 'Vuetify', 'PostgreSQL'],
+    images: [payrollImg1, payrollImg2, payrollImg3],
     githubUrl: 'https://github.com/chibelsonda/payroll',
   },
   {
-    title: 'GridPBX Communication',
-    description: `
-    GridPBX is a cloud-based telephony system that provides a complete suite of communication tools for businesses.
-    It includes features such as voicemail, call forwarding, call recording, and more.
-    It also includes a web interface for managing the system.
-    It is built with Laravel backend and Vuejs frontend, implementing JWT authentication for secure user management and API access.
-    `,
-    technologies: ['PHP', 'Laravel', 'Vuejs', 'Vuetify', 'MySQL', 'Linux', 'Git'],
-    images: [
-      gridpbx,
-    ],
-    githubUrl: '',
-  },
-  {
-    title: 'EU School',
-    description: `A Web Site for Japanese ESL students. It books teacher, room, and student schedules. 
-    It also has a dashboard for the school administrators to manage the school.`,
-    technologies: ['Php', 'Laravel', 'MySQL', 'JQuery', 'Boostrap', 'AWS', 'HTML', 'CSS', 'Linux', 'Git'],
-    images: [
-      euschool,
-    ],
-    siteUrl: '',
-    githubUrl: '',
-  },
-  {
     title: 'Vertex Auth',
-    description: `A centralized authentication system for Vertex Cybersecurity. Built with Nuxtjs frontend and Golang backend.`,
-    technologies: ['Vuejs', 'Nuxtjs', 'Golang', 'MySQL', 'Boostrap', 'HTML', 'CSS', 'JWT', 'Git'],
-    images: [
-      vertexAuthImg1,
-      vertexAuthImg2,
+    category: 'Identity & security',
+    summary: 'A centralized authentication platform for Vertex Cybersecurity, providing a shared foundation for secure user access.',
+    features: [
+      'Centralized sign-in experience for Vertex Cybersecurity systems',
+      'Secure user-management and authentication workflows',
+      'Reusable identity foundation for connected applications',
     ],
+    technicalDetails: [
+      'Nuxt frontend for the authentication interface',
+      'Go backend services for identity operations',
+      'JWT-based access with user data stored in MySQL',
+    ],
+    technologies: ['Nuxt', 'Go', 'MySQL', 'JWT'],
+    images: [vertexAuthImg1, vertexAuthImg2],
     siteUrl: 'https://auth.vertexcybersecurity.com.au/',
-    githubUrl: '',
   },
   {
     title: 'XSurfLog',
-    description: `XSurfLog is a security tool that protects users while browsing the internet. 
-    It works as a browser extension or installed app and helps prevent phishing attacks and dangerous websites.
-    What XSurfLog does (in simple terms):
-    Blocks fake and dangerous websites
-    It detects and stops phishing and scam sites - even if someone clicks a bad link by mistake.
-    Tracks website activity
-    - It records which websites are visited so companies can check for security problems, follow rules, and investigate issues if something goes wrong.
-    Prevents data leaks
-    - It helps stop employees from accidentally or intentionally sending company data to unsafe places.
-    Works everywhere
-    - It can be used in the cloud or installed inside a company, and works on computers, laptops, tablets, and phones.
-    Helps manage employee security risks
-    It helps companies see risky behavior and improve security awareness.`,
-    technologies: ['Php', 'Javascript', 'MySql', 'Bootstrap', 'JQuery', 'HTML', 'Git'],
-    images: [
-      xsurflogImg1,
-      xsurflogImg2,
-      xsurflogImg3,
+    category: 'Cybersecurity',
+    summary: 'A browser and endpoint security product that helps organizations reduce phishing exposure, monitor web activity, and protect company data.',
+    features: [
+      'Detects and blocks phishing, scam, and dangerous websites',
+      'Records website activity for compliance reviews and incident investigation',
+      'Helps prevent employees from sending company data to unsafe destinations',
+      'Supports computers, laptops, tablets, and mobile devices',
+      'Provides visibility into risky browsing behavior and employee security risk',
     ],
+    technicalDetails: [
+      'Available as a browser extension or installed endpoint application',
+      'Supports both cloud-hosted and on-premises deployments',
+      'PHP and MySQL backend with a JavaScript, Bootstrap, and jQuery interface',
+    ],
+    technologies: ['PHP', 'JavaScript', 'MySQL', 'Bootstrap'],
+    images: [xsurflogImg1, xsurflogImg2, xsurflogImg3],
     siteUrl: 'https://xsurflog.com',
-    githubUrl: '',
-  },
-  {
-    title: 'Daily Time Record System',
-    description: `
-    Daily Time Record System is a system that helps college employees manage their daily time record process.
-    It includes features such as time in, time out, and overtime.
-    It is built with C# .Net and MS SQL Server, implementing Crystal Report for reporting.
-    It is a desktop application that runs on Windows. 
-    `,
-    technologies: ['C#', '.Net', 'MS SQL Server', 'Crystal Report', 'Windows Server'],
-    images: [],
-    githubUrl: '',
-  },
-  {
-    title: 'Supply Management System',
-    description: `
-    Supply Management System is a system that helps college administrators manage their supply process.
-    It includes features such as inventory management, supplier management, purchase order management, and more.
-    It is built with C# .Net and MySQL, implementing Crystal Report for reporting and Excel for data export.
-    It is a desktop application that runs on Windows. 
-    `,
-    technologies: ['C#', '.Net', 'Entity Framework', 'MySQL', 'Crystal Report', 'Excel', 'Linux'],
-    images: [],
-    githubUrl: '',
-  },
-  {
-    title: 'Rosario Waterworks Billing System',
-    description: `
-    Rosario Waterworks Billing System is a system that helps Rosario Waterworks manage their billing process.
-    It includes features such as billing, payment, and more.
-    It is built with C# .Net and MySQL, implementing Crystal Report for reporting.
-    It is a desktop application that runs on Windows. 
-    `,
-    technologies: ['C#', '.Net', 'MySQL', 'Crystal Report'],
-    images: [],
-    githubUrl: '',
-  },
-  {
-    title: 'College Enrollment System',
-    description: `
-    College Enrollment System is a system that helps colleges manage their enrollment process.
-    It includes features such as student enrollment, student management, student records, class management, and more.
-    It is built with C# .Net and MySQL, implementing Crystal Report for reporting and Excel for data export.
-    It is a desktop application that runs on Windows. 
-    `,
-    technologies: ['C#', '.Net', 'MySQL', 'Crystal Report', 'Excel', 'Linux'],
-    images: [],
-    githubUrl: '',
-  },
-  {
-    title: 'College Library System',
-    description: `
-    College Library System is a desktop application that helps colleges manage their library process.
-    It includes features such as borrowing, returning, indexing, and cataloging books, student login, printing library cards.
-    It is built with VB6 and MySQL, implementing Crystal Report for reporting.
-    It is a desktop application that runs on Windows. 
-    `,
-    technologies: ['VB6', 'MySQL', 'Crystal Report'],
-    images: [],
-    githubUrl: '',
   },
 ]
 
+const additionalProjects = [
+  {
+    title: 'GridPBX Communication',
+    summary: 'Cloud telephony management for voicemail, forwarding, recording, and business communications.',
+    technologies: ['Laravel', 'Vue.js', 'MySQL', 'Linux'],
+    features: ['Web-based administration for the communication platform', 'Voicemail management', 'Call forwarding configuration', 'Call-recording workflows'],
+    technicalDetails: ['Laravel backend and Vue.js frontend', 'JWT authentication for user management and API access', 'MySQL database hosted in a Linux environment'],
+    image: gridpbx,
+  },
+  {
+    title: 'EU School',
+    summary: 'Scheduling and administration for Japanese ESL students, teachers, rooms, and school staff.',
+    technologies: ['Laravel', 'MySQL', 'AWS', 'jQuery'],
+    features: ['Coordinates teacher, room, and student bookings', 'Supports scheduling for Japanese ESL students', 'Administrative dashboard for managing school operations'],
+    technicalDetails: ['Laravel application backed by MySQL', 'jQuery and Bootstrap user interface', 'Deployed with AWS and Linux infrastructure'],
+    image: euschool,
+  },
+  {
+    title: 'Daily Time Record System',
+    summary: 'Windows application for employee time-in, time-out, overtime, and operational reporting.',
+    technologies: ['C#', '.NET', 'SQL Server', 'Crystal Reports'],
+    features: ['Records employee time-in and time-out activity', 'Tracks employee overtime', 'Produces daily-time-record reports'],
+    technicalDetails: ['Windows desktop application built with C# and .NET', 'SQL Server database for employee time records', 'Crystal Reports for printable reporting'],
+  },
+  {
+    title: 'Supply Management System',
+    summary: 'Inventory, supplier, and purchase-order workflows with reporting and Excel export.',
+    technologies: ['C#', '.NET', 'MySQL', 'Entity Framework'],
+    features: ['Tracks inventory and available supplies', 'Maintains supplier information', 'Manages purchase-order workflows', 'Exports operational data to Excel'],
+    technicalDetails: ['C# and .NET desktop application', 'Entity Framework data access with MySQL', 'Crystal Reports for printable reporting'],
+  },
+  {
+    title: 'Waterworks Billing System',
+    summary: 'Billing and payment management for Rosario Waterworks, including operational reports.',
+    technologies: ['C#', '.NET', 'MySQL', 'Crystal Reports'],
+    features: ['Centralizes customer billing records', 'Records and manages customer payments', 'Generates billing and payment reports'],
+    technicalDetails: ['C# and .NET desktop application', 'MySQL database for billing and payment data', 'Crystal Reports for printable documents'],
+  },
+  {
+    title: 'College Enrollment System',
+    summary: 'Enrollment, student records, and class-management workflows for college administrators.',
+    technologies: ['C#', '.NET', 'MySQL', 'Excel'],
+    features: ['Processes student enrollment', 'Maintains student information and academic records', 'Supports class-management workflows', 'Exports administrative data to Excel'],
+    technicalDetails: ['C# and .NET desktop application', 'MySQL relational database', 'Crystal Reports for enrollment and student reporting'],
+  },
+  {
+    title: 'College Library System',
+    summary: 'Cataloging, borrowing, returns, student access, and library-card printing in a desktop application.',
+    technologies: ['VB6', 'MySQL', 'Crystal Reports'],
+    features: ['Indexes and catalogs library books', 'Tracks borrowing and return transactions', 'Provides student login', 'Prints student library cards'],
+    technicalDetails: ['Windows desktop application built with VB6', 'MySQL database for catalog and transaction data', 'Crystal Reports for printable output'],
+  },
+]
+
+interface CompactProjectCardProps {
+  title: string
+  summary: string
+  technologies: string[]
+  features: string[]
+  technicalDetails: string[]
+  image?: string
+}
+
+function CompactProjectCard({ title, summary, technologies, features, technicalDetails, image }: CompactProjectCardProps) {
+  const [opened, { toggle }] = useDisclosure(false)
+  const [imageOpened, { open: openImage, close: closeImage }] = useDisclosure(false)
+  const detailsId = useId()
+
+  return (
+    <>
+      <Paper withBorder radius="lg" p="xl" className="compact-project">
+        <Stack gap="md" h="100%">
+          {image && (
+            <UnstyledButton
+              className="project-image-button compact-project-image"
+              onClick={openImage}
+              aria-label={`Open ${title} screenshot`}
+            >
+              <Image src={image} alt={`${title} interface`} h={170} fit="contain" loading="lazy" />
+            </UnstyledButton>
+          )}
+
+          <div>
+            <Title order={4} size="h4">{title}</Title>
+            <Text c="dimmed" size="sm" mt="xs" lh={1.6}>{summary}</Text>
+          </div>
+
+          <div>
+            <Button
+              variant="subtle"
+              size="compact-sm"
+              px={0}
+              onClick={toggle}
+              aria-expanded={opened}
+              aria-controls={detailsId}
+              rightSection={
+                <IconChevronDown
+                  size={16}
+                  className="details-chevron"
+                  data-opened={opened || undefined}
+                />
+              }
+            >
+              {opened ? 'Hide details' : 'More details'}
+            </Button>
+            <Collapse in={opened} id={detailsId}>
+              <Stack gap="lg" mt="md">
+                <div>
+                  <Text size="xs" fw={700} tt="uppercase" c="dimmed" lts="0.06em">Key features</Text>
+                  <Stack component="ul" gap={7} mt="xs" className="project-highlights">
+                    {features.map((feature) => <Text component="li" key={feature} size="sm">{feature}</Text>)}
+                  </Stack>
+                </div>
+                <div>
+                  <Text size="xs" fw={700} tt="uppercase" c="dimmed" lts="0.06em">Technical implementation</Text>
+                  <Stack component="ul" gap={7} mt="xs" className="project-highlights">
+                    {technicalDetails.map((detail) => <Text component="li" key={detail} size="sm">{detail}</Text>)}
+                  </Stack>
+                </div>
+              </Stack>
+            </Collapse>
+          </div>
+
+          <Group gap={6} mt="auto">
+            {technologies.map((technology) => (
+              <Badge key={technology} variant="light" color="gray">{technology}</Badge>
+            ))}
+          </Group>
+        </Stack>
+      </Paper>
+
+      {image && (
+        <Modal opened={imageOpened} onClose={closeImage} size="min(1100px, 94vw)" title={`${title} screenshot`} centered>
+          <Image src={image} alt={`${title} interface, enlarged screenshot`} mah="72vh" fit="contain" />
+        </Modal>
+      )}
+    </>
+  )
+}
+
 export function Projects() {
   return (
-    <Container fluid py="xl" id="projects">
-      <Title order={2} mb="sm" style={{ textAlign: 'center' }}>
-        Projects
-      </Title>
-      <Text c="dimmed" size="lg" mb="xl" style={{ textAlign: 'center' }}>
-        Some of my work
-      </Text>
-      <Grid mx={{ sm: 'sm', md: 'xl' }} gutter="md" justify={projects.length <= 2 ? 'center' : 'flex-start'}>
-        {projects.map((project, index) => (
-          <Grid.Col key={index} span={{ base: 12, sm: 6, md: 4 }}>
-            <ProjectCard
-              title={project.title}
-              description={project.description}
-              technologies={project.technologies}
-              images={project.images}
-              siteUrl={project.siteUrl}
-              githubUrl={project.githubUrl}
-            />
-          </Grid.Col>
-        ))}
-      </Grid>
-    </Container>
+    <section id="projects" className="projects-section">
+      <Container size="xl" py={{ base: 56, md: 88 }}>
+        <Title order={2} ta="center" className="section-title">Selected work</Title>
+        <Text c="dimmed" size="lg" mt="sm" mb={42} ta="center" maw={720} mx="auto" lh={1.6}>
+          Production-focused systems across business operations, financial workflows, communications, identity, and cybersecurity.
+        </Text>
+
+        <Grid gutter="xl" align="flex-start">
+          {featuredProjects.map((project) => (
+            <Grid.Col key={project.title} span={{ base: 12, md: 6 }}>
+              <ProjectCard {...project} />
+            </Grid.Col>
+          ))}
+        </Grid>
+
+        <Stack gap="lg" mt={{ base: 56, md: 80 }}>
+          <div>
+            <Title order={3} size="h2">Additional systems</Title>
+            <Text c="dimmed" mt={6}>A broader view of the domains and technology generations I have worked across.</Text>
+          </div>
+          <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing="lg" className="additional-project-grid">
+            {additionalProjects.map((project) => (
+              <CompactProjectCard key={project.title} {...project} />
+            ))}
+          </SimpleGrid>
+        </Stack>
+      </Container>
+    </section>
   )
 }
