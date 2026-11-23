@@ -38,7 +38,7 @@ const featuredProjects = [
       'Vue 3 and TypeScript SPA using Vue Router, Pinia, Vite, Tailwind CSS, and typed API contracts',
       'Domain-first Laravel 12 API backed by MySQL with UUID-first public identifiers',
       'Redis queues and Laravel Reverb power asynchronous work, notifications, and realtime features',
-      'Docker Compose development stack includes Nginx, PHP-FPM, MySQL, Redis, Reverb, queue workers, Mailpit, and Neo4j',
+      'Docker Compose development stack includes Nginx, PHP-FPM, MySQL, Redis, Reverb, and queue workers',
       'Migration commands, parity verification, and rollout runbooks support modernization from the legacy platform',
     ],
     technologies: ['Vue.js', 'TypeScript', 'Laravel', 'MySQL', 'Redis', 'Docker'],
