@@ -1,4 +1,4 @@
-import { Badge, Button, Collapse, Container, Grid, Group, Image, Modal, Paper, SimpleGrid, Stack, Text, Title, UnstyledButton } from '@mantine/core'
+import { Badge, Box, Button, Collapse, Container, Grid, Group, Image, Modal, Paper, Stack, Text, Title, UnstyledButton } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 import { IconChevronDown } from '@tabler/icons-react'
 import { useId } from 'react'
@@ -119,6 +119,11 @@ const featuredProjects = [
   },
 ]
 
+const featuredProjectColumns = [
+  featuredProjects.filter((_, index) => index % 2 === 0),
+  featuredProjects.filter((_, index) => index % 2 === 1),
+]
+
 const additionalProjects = [
   {
     title: 'GridPBX Communication',
@@ -172,6 +177,18 @@ const additionalProjects = [
     technicalDetails: ['Windows desktop application built with VB6', 'MySQL database for catalog and transaction data', 'Crystal Reports for printable output'],
   },
 ]
+
+const additionalProjectColumns = {
+  tablet: [
+    additionalProjects.filter((_, index) => index % 2 === 0),
+    additionalProjects.filter((_, index) => index % 2 === 1),
+  ],
+  desktop: [
+    additionalProjects.filter((_, index) => index % 3 === 0),
+    additionalProjects.filter((_, index) => index % 3 === 1),
+    additionalProjects.filter((_, index) => index % 3 === 2),
+  ],
+}
 
 interface CompactProjectCardProps {
   title: string
@@ -268,24 +285,64 @@ export function Projects() {
           Production-focused systems across business operations, financial workflows, communications, identity, and cybersecurity.
         </Text>
 
-        <Grid gutter="xl" align="flex-start">
+        <Stack gap="xl" hiddenFrom="md">
           {featuredProjects.map((project) => (
-            <Grid.Col key={project.title} span={{ base: 12, md: 6 }}>
-              <ProjectCard {...project} />
-            </Grid.Col>
+            <ProjectCard key={project.title} {...project} />
           ))}
-        </Grid>
+        </Stack>
+
+        <Box visibleFrom="md">
+          <Grid gutter="xl" align="flex-start">
+            {featuredProjectColumns.map((projects, columnIndex) => (
+              <Grid.Col key={columnIndex} span={6}>
+                <Stack gap="xl">
+                  {projects.map((project) => (
+                    <ProjectCard key={project.title} {...project} />
+                  ))}
+                </Stack>
+              </Grid.Col>
+            ))}
+          </Grid>
+        </Box>
 
         <Stack gap="lg" mt={{ base: 56, md: 80 }}>
           <div>
             <Title order={3} size="h2">Additional systems</Title>
             <Text c="dimmed" mt={6}>A broader view of the domains and technology generations I have worked across.</Text>
           </div>
-          <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing="lg" className="additional-project-grid">
+          <Stack gap="lg" hiddenFrom="sm">
             {additionalProjects.map((project) => (
               <CompactProjectCard key={project.title} {...project} />
             ))}
-          </SimpleGrid>
+          </Stack>
+
+          <Box visibleFrom="sm" hiddenFrom="lg">
+            <Grid gutter="lg" align="flex-start">
+              {additionalProjectColumns.tablet.map((projects, columnIndex) => (
+                <Grid.Col key={columnIndex} span={6}>
+                  <Stack gap="lg">
+                    {projects.map((project) => (
+                      <CompactProjectCard key={project.title} {...project} />
+                    ))}
+                  </Stack>
+                </Grid.Col>
+              ))}
+            </Grid>
+          </Box>
+
+          <Box visibleFrom="lg">
+            <Grid gutter="lg" align="flex-start">
+              {additionalProjectColumns.desktop.map((projects, columnIndex) => (
+                <Grid.Col key={columnIndex} span={4}>
+                  <Stack gap="lg">
+                    {projects.map((project) => (
+                      <CompactProjectCard key={project.title} {...project} />
+                    ))}
+                  </Stack>
+                </Grid.Col>
+              ))}
+            </Grid>
+          </Box>
         </Stack>
       </Container>
     </section>

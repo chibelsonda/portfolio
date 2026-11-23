@@ -74,10 +74,6 @@ body {
   background: var(--mantine-color-body);
 }
 
-.additional-project-grid {
-  align-items: start;
-}
-
 .project-image-button,
 .project-placeholder {
   display: grid;
