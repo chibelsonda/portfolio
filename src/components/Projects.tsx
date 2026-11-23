@@ -11,6 +11,10 @@ import hrImg2 from '/images/projects/hr/image-2.png'
 import payrollImg1 from '/images/projects/payroll/image-1.png'
 import payrollImg2 from '/images/projects/payroll/image-2.png'
 import payrollImg3 from '/images/projects/payroll/image-3.png'
+import socialDiscovery from '/images/projects/social/social-discovery.png'
+import socialFeed from '/images/projects/social/social-feed.png'
+import socialLogin from '/images/projects/social/social-login.png'
+import socialMessaging from '/images/projects/social/social-messaging.png'
 import vertexAuthImg1 from '/images/projects/vertex-auth/image-1.png'
 import vertexAuthImg2 from '/images/projects/vertex-auth/image-2.png'
 import xsurflogImg1 from '/images/projects/xsurflog/image-1.png'
@@ -18,6 +22,28 @@ import xsurflogImg2 from '/images/projects/xsurflog/image-2.png'
 import xsurflogImg3 from '/images/projects/xsurflog/image-3.png'
 
 const featuredProjects = [
+  {
+    title: 'Ethical Brand Social Platform',
+    category: 'Social platform modernization',
+    summary: 'A full-stack social platform spanning community, content, realtime messaging, commerce, identity, moderation, and administration.',
+    features: [
+      'Personalized social feed with posts, stories, saved content, reactions, and discovery',
+      'Community experiences for profiles, groups, pages, events, forums, blogs, jobs, and fundraisers',
+      'Realtime direct and group messaging with notifications and presence-aware workflows',
+      'Marketplace, offers, advertising, wallet, payment, and bank-transfer experiences',
+      'Extensive administration for users, content, settings, feature controls, moderation, and platform health',
+      'Account security including SSO, two-factor authentication, sessions, privacy controls, and social sign-in',
+    ],
+    technicalDetails: [
+      'Vue 3 and TypeScript SPA using Vue Router, Pinia, Vite, Tailwind CSS, and typed API contracts',
+      'Domain-first Laravel 12 API backed by MySQL with UUID-first public identifiers',
+      'Redis queues and Laravel Reverb power asynchronous work, notifications, and realtime features',
+      'Docker Compose development stack includes Nginx, PHP-FPM, MySQL, Redis, Reverb, queue workers, Mailpit, and Neo4j',
+      'Migration commands, parity verification, and rollout runbooks support modernization from the legacy platform',
+    ],
+    technologies: ['Vue.js', 'TypeScript', 'Laravel', 'MySQL', 'Redis', 'Docker'],
+    images: [socialFeed, socialMessaging, socialDiscovery, socialLogin],
+  },
   {
     title: 'HR System',
     category: 'Business operations',
