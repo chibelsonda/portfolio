@@ -15,6 +15,9 @@ import socialDiscovery from '/images/projects/social/social-discovery.png'
 import socialFeed from '/images/projects/social/social-feed.png'
 import socialLogin from '/images/projects/social/social-login.png'
 import socialMessaging from '/images/projects/social/social-messaging.png'
+import tradeledgerReports from '/images/projects/tradeledger/financial-reporting.png'
+import tradeledgerOverview from '/images/projects/tradeledger/operations-overview.png'
+import tradeledgerPayments from '/images/projects/tradeledger/payment-operations.png'
 import vertexAuthImg1 from '/images/projects/vertex-auth/image-1.png'
 import vertexAuthImg2 from '/images/projects/vertex-auth/image-2.png'
 import xsurflogImg1 from '/images/projects/xsurflog/image-1.png'
@@ -22,6 +25,30 @@ import xsurflogImg2 from '/images/projects/xsurflog/image-2.png'
 import xsurflogImg3 from '/images/projects/xsurflog/image-3.png'
 
 const featuredProjects = [
+  {
+    title: 'TradeLedger',
+    category: 'Fintech SaaS',
+    summary: 'A secure, multi-tenant subcontractor payment operations platform for approvals, retainage, payouts, financial reporting, and auditable payment lifecycles.',
+    features: [
+      'Coordinates project directories, subcontractors, payment requests, approvals, and role-aware workflows',
+      'Calculates retainage and net payable amounts with database-owned financial rules',
+      'Supports Stripe Checkout, refunds, reconciliation, connected payouts, and platform fees',
+      'Generates private payment-waiver PDFs with short-lived authorized downloads',
+      'Provides financial dashboards, CSV statements, webhook recovery, and immutable audit history',
+      'Protects every workspace with tenant isolation, governed membership, and PostgreSQL Row-Level Security',
+    ],
+    technicalDetails: [
+      'React 19 and strict TypeScript interface built with Tailwind CSS, Headless UI, Recharts, and Vite',
+      'Supabase Auth, PostgreSQL, Row-Level Security, Storage, and Edge Functions enforce data and authorization boundaries',
+      'Stripe Checkout and signed webhooks use server-owned amounts, idempotency, reconciliation, and durable refund records',
+      'Vitest, Playwright, executable database security scenarios, static analysis, and CI cover critical workflows',
+      'Deployed with Vercel and Supabase using restrictive security headers and production smoke checks',
+    ],
+    technologies: ['React', 'TypeScript', 'Supabase', 'PostgreSQL', 'Stripe', 'Tailwind CSS'],
+    images: [tradeledgerOverview, tradeledgerPayments, tradeledgerReports],
+    siteUrl: 'https://tradeledger-sepia.vercel.app',
+    githubUrl: 'https://github.com/chibelsonda/tradeledger',
+  },
   {
     title: 'Ethical Brand Social Platform',
     category: 'Social platform modernization',
