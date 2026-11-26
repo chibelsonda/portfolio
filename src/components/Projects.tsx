@@ -70,6 +70,7 @@ const featuredProjects = [
     ],
     technologies: ['Vue.js', 'TypeScript', 'Laravel', 'MySQL', 'Redis', 'Docker'],
     images: [socialFeed, socialMessaging, socialDiscovery, socialLogin],
+    siteUrl: 'https://social.ethicalbrand.com',
   },
   {
     title: 'HR System',
